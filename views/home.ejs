@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <% if (flash.success_msg) { %>
+    <div class="flash-message success"><%= flash.success_msg %></div>
+    <% } %> <% if (flash.error_msg) { %>
+    <div class="flash-message error"><%= flash.error_msg %></div>
+    <% } %>
+
+    <div class="container">
+      <h1>Welcome to the Home Page</h1>
+      <ul class="user-list">
+        <% users.forEach(user => { %>
+        <li class="user-item">
+          <span class="user-name"><%= user.name %></span>
+          <div class="user-actions">
+            <a href="/user/<%= user._id %>" class="edit-btn">Edit</a>
+            <form action="/delete-user" method="POST" style="display: inline">
+              <input type="hidden" name="id" value="<%= user._id %>" />
+              <button type="submit" class="delete-btn">Delete</button>
+            </form>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+
+      <h2>Add a New User</h2>
+      <form action="/add-user" method="POST" class="user-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <button type="submit">Add User</button>
+      </form>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

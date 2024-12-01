@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #4caf50;
+}
+
+.flash-message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.flash-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.flash-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.user-item:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+.user-name {
+  flex-grow: 1;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #007bff;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-form label {
+  margin: 10px 0 5px 0;
+}
+
+.user-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.user-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.user-form button:hover {
+  background-color: #45a049;
+}
